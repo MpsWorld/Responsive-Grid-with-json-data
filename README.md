@@ -11,6 +11,11 @@ In Responsive Screen
 # this grid also handle large data sets.
 --for test purpose i have tried with 80k records,its working perfectly.
 # To Create Grid all you need to follow the below steps
+-Add below js and css reference in your page
+```html
+<script src="mpsScript.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="responsive.css"/>
+```
 -Add div element for the grid with id
 ```html
 <div  id="data"></div>
