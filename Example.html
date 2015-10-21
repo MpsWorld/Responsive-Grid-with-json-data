@@ -1,1 +1,60 @@
+```html
 
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title></title>
+<link rel="stylesheet" href="Css/responsive.css"/>
+</head>
+<body onload="bindGrid();">
+    <div >
+        
+    <div  id="data"></div>
+         <div id="pageNavPosition"></div>
+       
+    </div>
+</body>
+</html>
+<script src="Script/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="Script/mpsScript.min.js" type="text/javascript"></script>
+<script src="Script/JsnData.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+   
+    var JsonData = jdata;
+
+    
+    function bindGrid() {
+       // console.profile();
+        Grid.Id = "data";
+        //pass id and Table css className
+        var grd = Grid.CreateGrid("data", "responstable");
+       
+        var colNames = "_id,index,guid,isActive,balance,age,eyeColor,name,gender,company,email,phone,address";
+           
+        //Provide Column Names
+        Grid.SetColumnHeader(grd, colNames);
+
+        //Provide Json Object data source
+        //var custs = jQuery.parseJSON(data.d);
+        Grid.setData(JsonData);
+       
+        Grid.SetPaging('data', 5);
+        Grid.SetHyperLink('name', 'CustomerDash.aspx?id=', '_id');
+        Grid.Bind();
+        //Grid.SetExportData(
+        //Grid.HyperLink('columnName on which hyperlink should displayed', 'url with id like CustomerDash.aspx?id=', 'parameter of id col name cust_id', '')
+     
+      //Grid.show_hide_column(0, '');
+        Grid.isDomReady();
+        Grid.SetExportFileName('CustomerReport');
+        lnkExprt.style.display = "block";
+        //console.profileEnd();
+    }
+    
+    
+</script>
+```
