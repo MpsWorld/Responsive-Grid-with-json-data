@@ -8,6 +8,8 @@ In Responsive Screen
 
 ![responsivempsgrid](https://cloud.githubusercontent.com/assets/9654044/10635047/7bac81a2-7813-11e5-83b7-b8e616a26243.png)
 
+# Supported browsers are IE10+,Firefox,Chrome and Safari.
+
 # this grid also handle large data sets.
 --for test purpose i have tried with 80k records,its working perfectly.
 # To Create Grid all you need to follow the below steps
