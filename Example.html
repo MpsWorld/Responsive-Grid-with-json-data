@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -5,52 +6,27 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <title></title>
-<link rel="stylesheet" href="responsive.css"/>
-    <style>
-        .ui-igloadingmsg
-        {
-            background-image: url(images/loading.gif);
-            width: 64px;
-            height: 64px;
-            position: absolute;
-             z-index: 20000;
-        }
-    </style>
+<link rel="stylesheet" href="Css/responsive.css"/>
 </head>
 <body onload="bindGrid();">
     <div >
         
-    <div  id="data" ></div>
+    <div  id="data"></div>
          <div id="pageNavPosition"></div>
-       <span id="loadingImg" class="ui-igloadingmsg" style="left: 497.5px; top: 104px; visibility: hidden; display: none;"></span>
+       
     </div>
-    
 </body>
 </html>
+<script src="Script/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="Script/mpsScript.min.js" type="text/javascript"></script>
+<script src="Script/JsnData.js" type="text/javascript"></script>
 
-<script src="jquery-1.9.0.min.js" type="text/javascript"></script>
-<script src="jscript.js" type="text/javascript"></script>
-<script src="jsnData.js" type="text/javascript"></script>
-
-<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/> 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 <script type="text/javascript">
-    var expanded = false;
-    function showCheckboxes() {
-        var checkboxes = document.getElementById("checkboxes");
-        if (!expanded) {
-            checkboxes.style.display = "block";
-            expanded = true;
-        } else {
-            checkboxes.style.display = "none";
-            expanded = false;
-        }
-    }
+   
     var JsonData = jdata;
 
     
     function bindGrid() {
-        try{
        // console.profile();
         Grid.Id = "data";
         //pass id and Table css className
@@ -74,13 +50,10 @@
       //Grid.show_hide_column(0, '');
         Grid.isDomReady();
         Grid.SetExportFileName('CustomerReport');
-        
-           // Grid.show_hide_column(0,false);
+        lnkExprt.style.display = "block";
         //console.profileEnd();
-        }
-        catch(err){
-        alert(err);}
     }
     
     
 </script>
+
